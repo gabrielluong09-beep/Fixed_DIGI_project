@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://br0507e3kjg2k"]
+
+[ext_resource type="Texture2D" uid="uid://cknqf8rdfme" path="res://assets/sprites/TileSet Wasteland/TileSet_Wasteland.png" id="1_mredy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywn1f"]
+size = Vector2(31.5625, 15.5)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(22.874998, 13.250001)
+scale = Vector2(0.64622647, 0.86111104)
+texture = ExtResource("1_mredy")
+region_enabled = true
+region_rect = Rect2(125, 15, 53, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(23.21875, 13.75)
+shape = SubResource("RectangleShape2D_ywn1f")
+one_way_collision = true
